@@ -1,0 +1,18 @@
+<app-header (search)="searchQuery=$event"></app-header>
+<app-filter *ngIf="restaurants.length" class="my-3" [restaurants]="restaurants" (filter)="filter($event)"></app-filter>
+<div class="container-fluid  mt-3" *ngIf="restaurants.length">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-xl-4 mb-2" *ngFor="let restaurant of filteredRestaurants | filter:searchQuery">
+                        <app-restaurant-card [restaurant]="restaurant"></app-restaurant-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <app-top-restaurants [restaurantsByYear]="getRestaurantByYear()"></app-top-restaurants>
+        </div>
+    </div>
+</div>

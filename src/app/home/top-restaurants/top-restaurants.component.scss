@@ -1,0 +1,27 @@
+.main-wrap{
+    background: #424874;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+
+    .year-dropdown{
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-bottom: 2px solid white;
+        option{
+            color: #333;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+
+    .top-restaurant-list{
+        color: #eee;
+        a{
+            color: white;
+        }
+    }
+}

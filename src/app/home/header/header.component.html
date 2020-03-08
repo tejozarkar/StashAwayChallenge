@@ -1,0 +1,10 @@
+<div class="header">
+    <img src="assets/ramen.png" class="logo">
+    <h4>Find best restaurants in town</h4>
+    <div class="search-box">
+        <fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
+        <input type="text" (input)="onSearch($event.srcElement.value)" placeholder="Search for restaurant brand, locality, variety">
+    </div>
+    <div class="background-img">
+    </div>
+</div>

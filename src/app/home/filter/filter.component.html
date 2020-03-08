@@ -1,0 +1,35 @@
+<div class="filter-by container-fluid">
+    <div class="row filters">
+        <div class="col-md-12">
+            <h5 class="filter-down d-inline-block" (click)="toggleFilter()">Filters
+                <fa-icon [icon]="faArrow" class="arrow-icon"></fa-icon>
+            </h5>
+        </div>
+    </div>
+    <div class="row" *ngIf="showFilter">
+        <div class="col-md-8">
+            <div class="container-fluid border-bottom pb-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Countries</label>
+                        <ng-select [items]="countries" bindLabel="name" bindValue="id" [multiple]="true"
+                            placeholder="Select countries" [(ngModel)]="selectedCountries" (change)="onFilterChange()">
+                        </ng-select>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Brands</label>
+                        <ng-select [items]="brands" bindLabel="name" bindValue="id" [multiple]="true"
+                            placeholder="Select brands" [(ngModel)]="selectedBrands" (change)="onFilterChange()">
+                        </ng-select>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Styles</label>
+                        <ng-select [items]="styles" bindLabel="name" bindValue="id" [multiple]="true"
+                            placeholder="Select styles" [(ngModel)]="selectedStyles" (change)="onFilterChange()">
+                        </ng-select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

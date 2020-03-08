@@ -1,0 +1,21 @@
+<div class="card restaurant-card p-3">
+    <p class="brand">
+        {{restaurant.Brand}}
+    </p>
+
+    <div class="rating" *ngIf="restaurant.Stars">
+        <fa-icon [icon]="faStar" class="star-icon"></fa-icon>
+        <b>{{restaurant.Stars}}</b>
+    </div>
+
+    <p class="variety">{{restaurant.Variety}}</p>
+
+    <p class="style" *ngIf="restaurant.Style"><span style="color: #5c7a8e">Style:</span> {{restaurant.Style}}</p>
+
+    <div class="location">
+        <div class="float-right">
+            <fa-icon [icon]="faMapMarker" class="marker-icon"></fa-icon>
+            {{restaurant.Country}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+.header {
+  height: 400px;
+  background: #041d4685;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h4 {
+    color: white;
+  }
+
+  .logo {
+    width: 100px;
+    margin-top: 60px;
+  }
+
+  .background-img {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("./../../../assets/background.jpg");
+    background-size: cover;
+    background-position-y: -300px;
+  }
+
+  .search-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 50px;
+    width: 40%;
+    .search-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(138, 136, 136, 0.664);
+    }
+    input {
+      border-radius: 5px;
+      padding: 10px 5px 10px 40px;
+      border: none;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    .search-box {
+      width: 80%;
+    }
+  }
+}

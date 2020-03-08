@@ -1,0 +1,15 @@
+<div class="main-wrap p-3">
+    <h5 class="d-inline">Top Restaurants in
+        <select class="d-inline year-dropdown" (change)="selectYear()" [(ngModel)]="selectedYear">
+            <option *ngFor="let year of years">{{year}}</option>
+        </select>
+    </h5>
+
+    <div class="top-restaurant-list mt-3">
+        <div *ngFor="let restaurant of selectedRestaurants; sort" class="mb-2">
+            <a routerLink="">
+                #{{restaurant.getRank()}} {{restaurant.Brand}}
+            </a>
+        </div>
+    </div>
+</div>
