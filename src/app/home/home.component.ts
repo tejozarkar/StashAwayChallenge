@@ -49,13 +49,17 @@ export class HomeComponent implements OnInit {
     this.filteredRestaurants = this.restaurants.filter(restaurant => {
       let country = true;
       let brand = true;
+      let style = true;
       if (filterBy.countries && filterBy.countries.length) {
         country = filterBy.countries.includes(restaurant.Country);
       }
       if (filterBy.brands && filterBy.brands.length) {
         brand = filterBy.brands.includes(restaurant.Brand);
       }
-      return country && brand;
+      if (filterBy.styles && filterBy.styles.length) {
+        style = filterBy.styles.includes(restaurant.Style);
+      }
+      return country && brand && style;
     });
   }
 
